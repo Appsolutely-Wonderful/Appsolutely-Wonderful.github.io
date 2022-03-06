@@ -1,0 +1,68 @@
+---
+layout: default
+title:  "GitHub Pages!"
+date:   2022-03-05 02:50:00 -0000
+categories: jekyll
+---
+
+# This Website!
+
+I think this site itself is suitable as the first item in the
+workshop's portfolio. I went through a surprising amount of
+hassle setting this site up. I thought GitHub Pages was supposed to
+make it easy, but it really wasn't (though maybe that was my own fault).
+I had problems with getting my theme to work and problems setting up Jekyll!
+
+So while this site may not be that impressive on its own, just know
+I went through some trouble. Here's some tips in case you want
+to set up your own.
+
+## Quick Guide
+Pro Tip: if your mac doesn't have XCode because your mac had no space
+and you chose to delete it and then things like brew and gem stopped
+working for you so you couldn't install Jekyll the easy way, I've
+got you covered.
+
+### Docker
+Docker can handle it for you. Go get [Docker](https://www.docker.com/).
+Then check out [this page](https://github.com/envygeeks/jekyll-docker/blob/master/README.md)
+for instructions on using Jekyll within docker.
+You can create a new Jekyll project with this docker command:
+{% highlight bash %}
+export JEKYLL_VERSION=3.8
+docker run --rm \
+  --volume="$PWD:/srv/jekyll" \
+  -it jekyll/jekyll:$JEKYLL_VERSION \
+  jekyll new --skip-bundle .
+{% endhighlight %}
+
+### Config
+Then in your Gemfile, make sure you comment out `gem "jekyll"`
+and uncomment the `gem "github-pages"`, and also you need to go to
+[this page](https://pages.github.com/versions/) and then update
+the line to have the correct version. For me this looks like
+`gem "github-pages", "~> 225", group: :jekyll_plugins`
+
+### Setting the Theme
+Now GitHub has this neat theme picker in the settings! Does it work?
+**No!** 
+
+Well it didn't for me, GitHub updates your `_config.yml` and sets
+`theme: the-theme-you-select` and that doesn't work at all. I just
+ended up with a blank white page. And after lots of googling I found
+that you need to add `remote_theme: your-selected-theme` and add
+`- jekyll-remote-theme` to the plugins section.
+
+For me this looks like 
+{% highlight yaml %}
+remote_theme: pages-themes/architect@v0.2.0
+plugins:
+  - jekyll-feed
+  - jekyll-remote-theme
+{% endhighlight %}
+
+## Conclusion
+At this point I finally had a template to start working
+on this site. And I hope this helps someone setting up their site.
+But thanks to the amount of effort this took, I decided
+it would be a good project to start with in this portfolio.
