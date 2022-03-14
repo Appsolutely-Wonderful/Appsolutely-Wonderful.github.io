@@ -3,6 +3,7 @@ layout: default
 title:  "Blog"
 date:   2022-03-05 02:50:00 -0000
 categories: jekyll
+description: A post about how I set up this blog.
 ---
 
 # This Website!
