@@ -10,17 +10,18 @@ title: Appsolutely Wonderful
 
 I'm glad you're here! You've found Daniel's portfolio.
 Here you can find some projects I've worked on. I'm always
-working on new things so check back often to check out some
-cool new projects.
+working on new things so check back often to see some cool
+new projects.
 
-## Projects
-Check back often as I continue to add more projects.
-
-<ul>
+<div class="posts">
   {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+    <article class="post">
 
+      <h2><a href="{{ site.baseurl }}{{ post.url }}">Project: {{ post.title }}</a></h2>
+
+      <div class="entry">
+        {{ post.description }}
+      </div>
+    </article>
+  {% endfor %}
+</div>
