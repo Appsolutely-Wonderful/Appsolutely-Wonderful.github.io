@@ -3,7 +3,7 @@ layout: default
 title:  "Gnome Scaling Settings"
 date:   2022-04-03 14:45:00 -0000
 categories: GNOME
-description: Fixing scaling in GNOME.
+description: How to fix scaling in gnome.
 type: Patch
 ---
 
