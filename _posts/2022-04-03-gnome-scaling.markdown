@@ -14,10 +14,10 @@ gsettings set org.gnome.mutter experimental-features "['scale-monitor'framebuffe
 ```
 
 Before:
-TODO: Insert Screenshot
+![Settings screen before modification](/assets/images/settings-before.png)
 
 After:
-TODO: Insert Screenshotn
+![Settings screen after modification](/assets/images/settings-after.png)
 
 ## Back Story
 
