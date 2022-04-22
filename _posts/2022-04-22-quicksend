@@ -1,0 +1,37 @@
+---
+layout: default
+title:  "Quicksend"
+date:   2022-04-22 14:26:00 -0000
+categories: projects tools
+description: The best way to transfer a file
+type: Project
+---
+
+# What is quicksend?
+
+[Quicksend](https://github.com/dangarbri/quicksend) is a command line
+utility for transferring files between computers connected to a local
+network. It is an alternative to setting up things like an ssh daemon,
+ftp server, samba share, etc, when you just want a simple file
+transfer. No configuration is necessary.
+
+# Why does this exist?
+
+I wrote quicksend because I find it a pain to use cloud servers for
+moving files between PC’s on my local network. I don’t have much media
+on my computers, so I don’t have a big need for setting up a network
+file share between them. An NFS like samba is a fine solution, but in
+that moment where I wanted to send a file and not have to configure a
+samba share, I couldn’t find anything. And if you don't have a local
+NFS, your only other options are dropbox and friends or emailing
+yourself. All of these are way more work when I just want to copy a
+file.
+
+I did complain a bit on a forum and got some feedback that I was being
+lazy, well yes, I was being lazy. Computers are supposed to make these
+kinds of things easy! The whole point is to limit the work, but it’s
+also true that many programs come out of “lazy programmers” and
+quicksend is another example of it.
+
+Right now it requires being compiled manually, but soon I’ll create
+pre-built binaries and attach them to the release.
